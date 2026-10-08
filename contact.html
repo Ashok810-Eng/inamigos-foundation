@@ -1,0 +1,2139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Contact InAmigos Foundation to learn about volunteering, partnerships, projects and community initiatives."
+  >
+
+  <title>Contact Us | InAmigos Foundation</title>
+
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 85px;
+    }
+
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: #1f2937;
+      background: #f8fafc;
+    }
+
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+
+    button,
+    input,
+    textarea,
+    select {
+      font-family: inherit;
+    }
+
+
+    .container {
+      width: min(1120px, 92%);
+      margin: auto;
+    }
+
+
+    /* =========================
+       TOP BAR
+    ========================= */
+
+    .top-bar {
+      background: #166534;
+      color: white;
+      text-align: center;
+      padding: 9px 15px;
+      font-size: 14px;
+    }
+
+
+    /* =========================
+       NAVBAR
+    ========================= */
+
+    header {
+      background: white;
+      border-bottom: 1px solid #e5e7eb;
+
+      position: sticky;
+      top: 0;
+
+      z-index: 1000;
+    }
+
+
+    .navbar {
+      min-height: 75px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 30px;
+    }
+
+
+    /* LOGO */
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      color: #166534;
+
+      flex-shrink: 0;
+    }
+
+
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+
+      background: #dcfce7;
+
+      border-radius: 10px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 22px;
+    }
+
+
+    .logo-text h1 {
+      font-size: 22px;
+      line-height: 1;
+      font-weight: 800;
+    }
+
+
+    .logo-text span {
+      color: #f59e0b;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+
+    /* NAVIGATION */
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+
+    nav a {
+      font-size: 15px;
+      font-weight: 600;
+
+      color: #374151;
+
+      transition: 0.3s;
+    }
+
+
+    nav a:hover,
+    nav a.active {
+      color: #166534;
+    }
+
+
+    .nav-button {
+      background: #166534;
+
+      color: white !important;
+
+      padding: 11px 18px;
+
+      border-radius: 7px;
+    }
+
+
+    .nav-button:hover {
+      background: #14532d;
+    }
+
+
+    /* MOBILE MENU BUTTON */
+
+    .menu-toggle {
+      display: none;
+
+      border: none;
+      background: transparent;
+
+      color: #166534;
+
+      font-size: 30px;
+
+      cursor: pointer;
+
+      padding: 5px;
+
+      line-height: 1;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .page-hero {
+
+      background:
+        linear-gradient(
+          rgba(22, 101, 52, 0.87),
+          rgba(22, 101, 52, 0.87)
+        ),
+        url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1600&q=80");
+
+      background-size: cover;
+      background-position: center;
+
+      padding: 100px 20px;
+
+      text-align: center;
+
+      color: white;
+    }
+
+
+    .page-hero h1 {
+
+      font-size: clamp(38px, 6vw, 60px);
+
+      margin-bottom: 15px;
+    }
+
+
+    .page-hero p {
+
+      max-width: 720px;
+
+      margin: auto;
+
+      font-size: 18px;
+    }
+
+
+    /* =========================
+       INTRO
+    ========================= */
+
+    .intro {
+
+      padding: 75px 0 45px;
+
+      text-align: center;
+    }
+
+
+    .section-label {
+
+      color: #f59e0b;
+
+      text-transform: uppercase;
+
+      font-size: 13px;
+
+      font-weight: 800;
+
+      letter-spacing: 1.5px;
+
+      margin-bottom: 10px;
+    }
+
+
+    .intro h2 {
+
+      font-size: 38px;
+
+      color: #111827;
+
+      margin-bottom: 15px;
+    }
+
+
+    .intro p {
+
+      max-width: 750px;
+
+      margin: auto;
+
+      color: #6b7280;
+    }
+
+
+    /* =========================
+       CONTACT SECTION
+    ========================= */
+
+    .contact-section {
+
+      padding: 30px 0 90px;
+    }
+
+
+    .contact-grid {
+
+      display: grid;
+
+      grid-template-columns: 0.85fr 1.15fr;
+
+      gap: 35px;
+
+      align-items: start;
+    }
+
+
+    /* =========================
+       CONTACT INFORMATION
+    ========================= */
+
+    .contact-info {
+
+      background: #166534;
+
+      color: white;
+
+      padding: 35px;
+
+      border-radius: 15px;
+    }
+
+
+    .contact-info h3 {
+
+      font-size: 27px;
+
+      margin-bottom: 12px;
+    }
+
+
+    .contact-info > p {
+
+      color: #dcfce7;
+
+      margin-bottom: 30px;
+    }
+
+
+    .contact-item {
+
+      display: flex;
+
+      gap: 15px;
+
+      margin-bottom: 25px;
+    }
+
+
+    .contact-icon {
+
+      width: 45px;
+      height: 45px;
+
+      flex-shrink: 0;
+
+      border-radius: 8px;
+
+      background: rgba(255, 255, 255, 0.15);
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      font-size: 21px;
+    }
+
+
+    .contact-item h4 {
+
+      margin-bottom: 3px;
+    }
+
+
+    .contact-item p,
+    .contact-item a {
+
+      color: #dcfce7;
+
+      font-size: 14px;
+    }
+
+
+    .contact-item a:hover {
+
+      color: white;
+    }
+
+
+    /* =========================
+       SOCIAL LINKS
+    ========================= */
+
+    .social-section {
+
+      margin-top: 30px;
+
+      padding-top: 25px;
+
+      border-top:
+        1px solid rgba(255, 255, 255, 0.2);
+    }
+
+
+    .social-section h4 {
+
+      margin-bottom: 15px;
+    }
+
+
+    .social-links {
+
+      display: flex;
+
+      gap: 10px;
+
+      flex-wrap: wrap;
+    }
+
+
+    .social-link {
+
+      padding: 8px 13px;
+
+      border:
+        1px solid rgba(255, 255, 255, 0.35);
+
+      border-radius: 6px;
+
+      font-size: 13px;
+
+      color: white;
+
+      transition: 0.3s;
+    }
+
+
+    .social-link:hover {
+
+      background: white;
+
+      color: #166534;
+    }
+
+
+    /* =========================
+       CONTACT FORM
+    ========================= */
+
+    .contact-form {
+
+      background: white;
+
+      padding: 35px;
+
+      border-radius: 15px;
+
+      border: 1px solid #e5e7eb;
+
+      box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.06);
+    }
+
+
+    .contact-form h3 {
+
+      font-size: 27px;
+
+      margin-bottom: 8px;
+
+      color: #111827;
+    }
+
+
+    .contact-form > p {
+
+      color: #6b7280;
+
+      margin-bottom: 25px;
+    }
+
+
+    .form-row {
+
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 18px;
+    }
+
+
+    .form-group {
+
+      margin-bottom: 18px;
+    }
+
+
+    .form-group label {
+
+      display: block;
+
+      font-size: 14px;
+
+      font-weight: 700;
+
+      margin-bottom: 7px;
+
+      color: #374151;
+    }
+
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+
+      width: 100%;
+
+      padding: 13px;
+
+      border:
+        1px solid #d1d5db;
+
+      border-radius: 7px;
+
+      font-size: 14px;
+
+      outline: none;
+
+      background: white;
+
+      transition: 0.3s;
+    }
+
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+
+      border-color: #166534;
+
+      box-shadow:
+        0 0 0 3px rgba(22, 101, 52, 0.08);
+    }
+
+
+    .form-group textarea {
+
+      min-height: 140px;
+
+      resize: vertical;
+    }
+
+
+    .submit-button {
+
+      width: 100%;
+
+      border: none;
+
+      background: #166534;
+
+      color: white;
+
+      padding: 14px;
+
+      border-radius: 7px;
+
+      font-weight: 800;
+
+      cursor: pointer;
+
+      font-size: 15px;
+
+      transition: 0.3s;
+    }
+
+
+    .submit-button:hover {
+
+      background: #14532d;
+
+      transform: translateY(-1px);
+    }
+
+
+    /* SUCCESS MESSAGE */
+
+    .form-message {
+
+      display: none;
+
+      margin-top: 18px;
+
+      padding: 13px 15px;
+
+      border-radius: 7px;
+
+      background: #dcfce7;
+
+      color: #166534;
+
+      font-size: 14px;
+
+      font-weight: 600;
+
+      text-align: center;
+    }
+
+
+    .form-message.show {
+
+      display: block;
+    }
+
+
+    /* =========================
+       LOCATION
+    ========================= */
+
+    .location {
+
+      background: #fef3c7;
+
+      padding: 75px 0;
+    }
+
+
+    .location-grid {
+
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 45px;
+
+      align-items: center;
+    }
+
+
+    .location-text h2 {
+
+      font-size: 35px;
+
+      color: #111827;
+
+      margin-bottom: 15px;
+    }
+
+
+    .location-text > p {
+
+      color: #6b7280;
+
+      margin-bottom: 20px;
+    }
+
+
+    .location-box {
+
+      background: white;
+
+      padding: 30px;
+
+      border-radius: 14px;
+
+      border: 1px solid #e5e7eb;
+    }
+
+
+    .location-box h3 {
+
+      color: #166534;
+
+      margin-bottom: 10px;
+    }
+
+
+    .location-box p {
+
+      color: #6b7280;
+
+      margin-bottom: 6px;
+    }
+
+
+    .map-placeholder {
+
+      min-height: 280px;
+
+      border-radius: 14px;
+
+      background:
+        linear-gradient(
+          rgba(22, 101, 52, 0.78),
+          rgba(22, 101, 52, 0.78)
+        ),
+        url("https://images.unsplash.com/photo-1524666041070-9c876415a705?auto=format&fit=crop&w=1000&q=80");
+
+      background-size: cover;
+
+      background-position: center;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      text-align: center;
+
+      color: white;
+
+      padding: 25px;
+    }
+
+
+    .map-placeholder h3 {
+
+      font-size: 27px;
+
+      margin-bottom: 8px;
+    }
+
+
+    /* =========================
+       FAQ
+    ========================= */
+
+    .faq {
+
+      padding: 80px 0;
+    }
+
+
+    .faq-heading {
+
+      text-align: center;
+
+      margin-bottom: 40px;
+    }
+
+
+    .faq-heading h2 {
+
+      font-size: 35px;
+
+      color: #111827;
+
+      margin-bottom: 10px;
+    }
+
+
+    .faq-heading p {
+
+      color: #6b7280;
+    }
+
+
+    .faq-grid {
+
+      max-width: 850px;
+
+      margin: auto;
+
+      display: grid;
+
+      gap: 15px;
+    }
+
+
+    details {
+
+      background: white;
+
+      border:
+        1px solid #e5e7eb;
+
+      border-radius: 8px;
+
+      padding: 18px 20px;
+
+      transition: 0.3s;
+    }
+
+
+    details:hover {
+
+      border-color: #bbf7d0;
+    }
+
+
+    details[open] {
+
+      border-color: #86efac;
+    }
+
+
+    summary {
+
+      cursor: pointer;
+
+      font-weight: 700;
+
+      color: #111827;
+    }
+
+
+    details p {
+
+      color: #6b7280;
+
+      margin-top: 12px;
+
+      padding-top: 12px;
+
+      border-top:
+        1px solid #e5e7eb;
+    }
+
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .cta {
+
+      padding: 85px 20px;
+
+      text-align: center;
+
+      background: #166534;
+
+      color: white;
+    }
+
+
+    .cta h2 {
+
+      font-size: 38px;
+
+      margin-bottom: 15px;
+    }
+
+
+    .cta p {
+
+      max-width: 650px;
+
+      margin: 0 auto 25px;
+
+      opacity: 0.9;
+    }
+
+
+    .cta-button {
+
+      display: inline-block;
+
+      background: #f59e0b;
+
+      color: #111827;
+
+      padding: 14px 25px;
+
+      border-radius: 7px;
+
+      font-weight: 800;
+
+      transition: 0.3s;
+    }
+
+
+    .cta-button:hover {
+
+      background: #d97706;
+
+      transform: translateY(-2px);
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+
+      background: #111827;
+
+      color: white;
+
+      padding: 50px 0 25px;
+    }
+
+
+    .footer-grid {
+
+      display: grid;
+
+      grid-template-columns: 2fr 1fr 1fr;
+
+      gap: 40px;
+
+      margin-bottom: 35px;
+    }
+
+
+    .footer-brand h3 {
+
+      font-size: 23px;
+
+      margin-bottom: 12px;
+    }
+
+
+    .footer-brand h3 span {
+
+      color: #f59e0b;
+    }
+
+
+    .footer-brand p {
+
+      color: #9ca3af;
+
+      max-width: 430px;
+    }
+
+
+    .footer-column h4 {
+
+      margin-bottom: 13px;
+    }
+
+
+    .footer-column a {
+
+      display: block;
+
+      color: #9ca3af;
+
+      margin-bottom: 8px;
+
+      font-size: 14px;
+    }
+
+
+    .footer-column a:hover {
+
+      color: white;
+    }
+
+
+    .copyright {
+
+      border-top:
+        1px solid #374151;
+
+      padding-top: 20px;
+
+      text-align: center;
+
+      color: #9ca3af;
+
+      font-size: 13px;
+    }
+
+
+    /* =========================
+       TABLET
+    ========================= */
+
+    @media (max-width: 850px) {
+
+      .navbar {
+
+        min-height: 70px;
+
+        position: relative;
+
+        flex-wrap: wrap;
+      }
+
+
+      .menu-toggle {
+
+        display: block;
+
+        margin-left: auto;
+      }
+
+
+      .navbar nav {
+
+        display: none;
+
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 14px;
+
+        padding: 20px 0;
+      }
+
+
+      .navbar nav.active {
+
+        display: flex;
+      }
+
+
+      .navbar nav a {
+
+        width: 100%;
+
+        text-align: center;
+
+        padding: 8px;
+      }
+
+
+      .nav-button {
+
+        display: block;
+      }
+
+
+      .contact-grid,
+      .location-grid {
+
+        grid-template-columns: 1fr;
+      }
+
+
+      .footer-grid {
+
+        grid-template-columns: 1fr 1fr;
+      }
+
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 600px) {
+
+      .page-hero {
+
+        padding: 70px 20px;
+      }
+
+
+      .page-hero h1 {
+
+        font-size: 40px;
+      }
+
+
+      .page-hero p {
+
+        font-size: 16px;
+      }
+
+
+      .intro {
+
+        padding: 60px 0 35px;
+      }
+
+
+      .intro h2,
+      .location-text h2,
+      .faq-heading h2,
+      .cta h2 {
+
+        font-size: 30px;
+      }
+
+
+      .contact-section {
+
+        padding-bottom: 65px;
+      }
+
+
+      .contact-info,
+      .contact-form {
+
+        padding: 25px;
+      }
+
+
+      .form-row {
+
+        grid-template-columns: 1fr;
+
+        gap: 0;
+      }
+
+
+      .location {
+
+        padding: 60px 0;
+      }
+
+
+      .map-placeholder {
+
+        min-height: 230px;
+      }
+
+
+      .faq {
+
+        padding: 60px 0;
+      }
+
+
+      .footer-grid {
+
+        grid-template-columns: 1fr;
+      }
+
+
+      .logo-text h1 {
+
+        font-size: 20px;
+      }
+
+
+      .logo-icon {
+
+        width: 38px;
+        height: 38px;
+
+        font-size: 20px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       TOP BAR
+  ========================= -->
+
+  <div class="top-bar">
+
+    Empowering Communities • Creating Sustainable Change
+
+  </div>
+
+
+
+  <!-- =========================
+       NAVBAR
+  ========================= -->
+
+  <header>
+
+    <div class="container navbar">
+
+
+      <a
+        href="index.html"
+        class="logo"
+        aria-label="InAmigos Foundation Home"
+      >
+
+        <div class="logo-icon">
+          🤝
+        </div>
+
+        <div class="logo-text">
+
+          <h1>
+            InAmigos
+          </h1>
+
+          <span>
+            Foundation
+          </span>
+
+        </div>
+
+      </a>
+
+
+      <!-- MOBILE MENU BUTTON -->
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+
+
+      <nav id="mainNav">
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="about.html">
+          About
+        </a>
+
+        <a href="projects.html">
+          Projects
+        </a>
+
+        <a href="index.html#mission">
+          Mission
+        </a>
+
+        <a href="get-involved.html">
+          Get Involved
+        </a>
+
+        <a
+          href="contact.html"
+          class="active nav-button"
+        >
+          Contact Us
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- =========================
+       HERO
+  ========================= -->
+
+  <section class="page-hero">
+
+    <div class="container">
+
+      <h1>
+        Contact Us
+      </h1>
+
+      <p>
+
+        Have a question, want to volunteer, or interested
+        in supporting our mission? We'd love to hear from you.
+
+      </p>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       INTRO
+  ========================= -->
+
+  <section class="intro">
+
+    <div class="container">
+
+      <div class="section-label">
+        Let's Connect
+      </div>
+
+      <h2>
+        We'd Love to Hear From You
+      </h2>
+
+      <p>
+
+        Whether you have a question about our initiatives
+        or want to explore ways to work with us, feel free
+        to get in touch.
+
+      </p>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       CONTACT SECTION
+  ========================= -->
+
+  <section class="contact-section">
+
+    <div class="container">
+
+      <div class="contact-grid">
+
+
+        <!-- CONTACT INFORMATION -->
+
+        <div class="contact-info">
+
+          <h3>
+            Contact Information
+          </h3>
+
+          <p>
+            Reach out to us using any of the options below.
+          </p>
+
+
+          <!-- LOCATION -->
+
+          <div class="contact-item">
+
+            <div class="contact-icon">
+              📍
+            </div>
+
+            <div>
+
+              <h4>
+                Location
+              </h4>
+
+              <p>
+                Chhattisgarh, India
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <!-- EMAIL -->
+
+          <div class="contact-item">
+
+            <div class="contact-icon">
+              ✉️
+            </div>
+
+            <div>
+
+              <h4>
+                Email
+              </h4>
+
+              <a href="mailto:ashok807459@gmail.com">
+
+                ashok807459@gmail.com
+
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <!-- PHONE -->
+
+          <div class="contact-item">
+
+            <div class="contact-icon">
+              📞
+            </div>
+
+            <div>
+
+              <h4>
+                Phone
+              </h4>
+
+              <a href="tel:+918102254939">
+
+                +91 81022 54939
+
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <!-- OFFICE HOURS -->
+
+          <div class="contact-item">
+
+            <div class="contact-icon">
+              🕐
+            </div>
+
+            <div>
+
+              <h4>
+                Office Hours
+              </h4>
+
+              <p>
+
+                Monday – Saturday<br>
+
+                10:00 AM – 6:00 PM
+
+              </p>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- SOCIAL LINKS -->
+
+          <div class="social-section">
+
+            <h4>
+              Follow Us
+            </h4>
+
+            <div class="social-links">
+
+              <!-- Replace # with your actual social URLs later -->
+
+              <a
+                href="https://www.instagram.com/"
+                class="social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Instagram
+              </a>
+
+
+              <a
+                href="https://www.facebook.com/"
+                class="social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Facebook
+              </a>
+
+
+              <a
+                href="https://www.linkedin.com/"
+                class="social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn
+              </a>
+
+
+              <a
+                href="https://www.youtube.com/"
+                class="social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                YouTube
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- =========================
+             CONTACT FORM
+        ========================= -->
+
+        <div class="contact-form">
+
+          <h3>
+            Send Us a Message
+          </h3>
+
+          <p>
+            Fill out the form and we'll get back to you.
+          </p>
+
+
+          <form id="contactForm">
+
+
+            <!-- NAME + EMAIL -->
+
+            <div class="form-row">
+
+
+              <div class="form-group">
+
+                <label for="name">
+                  Full Name
+                </label>
+
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Enter your name"
+                  autocomplete="name"
+                  required
+                >
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="email">
+                  Email Address
+                </label>
+
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Enter your email"
+                  autocomplete="email"
+                  required
+                >
+
+              </div>
+
+
+            </div>
+
+
+
+            <!-- SUBJECT -->
+
+            <div class="form-group">
+
+              <label for="subject">
+                Subject
+              </label>
+
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="What would you like to discuss?"
+                required
+              >
+
+            </div>
+
+
+
+            <!-- REASON -->
+
+            <div class="form-group">
+
+              <label for="reason">
+                Reason for Contact
+              </label>
+
+              <select
+                id="reason"
+                name="reason"
+                required
+              >
+
+                <option value="">
+                  Select an option
+                </option>
+
+                <option value="general">
+                  General Enquiry
+                </option>
+
+                <option value="volunteer">
+                  Volunteer
+                </option>
+
+                <option value="donation">
+                  Donation
+                </option>
+
+                <option value="partnership">
+                  Partnership
+                </option>
+
+                <option value="project">
+                  Project Information
+                </option>
+
+                <option value="other">
+                  Other
+                </option>
+
+              </select>
+
+            </div>
+
+
+
+            <!-- MESSAGE -->
+
+            <div class="form-group">
+
+              <label for="message">
+                Message
+              </label>
+
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Write your message here..."
+                required
+              ></textarea>
+
+            </div>
+
+
+
+            <!-- SUBMIT -->
+
+            <button
+              type="submit"
+              class="submit-button"
+            >
+              Send Message
+            </button>
+
+
+            <!-- SUCCESS MESSAGE -->
+
+            <div
+              id="formMessage"
+              class="form-message"
+              role="status"
+              aria-live="polite"
+            >
+              Thank you! Your message has been submitted
+              successfully.
+            </div>
+
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       LOCATION
+  ========================= -->
+
+  <section class="location" id="location"></section>
+
+    <div class="container">
+
+      <div class="location-grid">
+
+
+        <div class="location-text">
+
+          <div class="section-label">
+            Find Us
+          </div>
+
+          <h2>
+            Our Location
+          </h2>
+
+          <p>
+
+            InAmigos Foundation works with communities
+            in Chhattisgarh, India, focusing on initiatives
+            that create meaningful social impact.
+
+          </p>
+
+
+          <div class="location-box">
+
+            <h3>
+              InAmigos Foundation
+            </h3>
+
+            <p>
+              📍 Chhattisgarh, India
+            </p>
+
+            <p>
+              🌱 Community-focused initiatives
+            </p>
+
+            <p>
+              🤝 Volunteer and partnership opportunities
+            </p>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="map-placeholder">
+
+          <div>
+
+            <h3>
+              📍 Chhattisgarh, India
+            </h3>
+
+            <p>
+              Our community work starts here.
+            </p>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       FAQ
+  ========================= -->
+
+  <section class="faq">
+
+    <div class="container">
+
+
+      <div class="faq-heading">
+
+        <div class="section-label">
+          FAQ
+        </div>
+
+        <h2>
+          Frequently Asked Questions
+        </h2>
+
+        <p>
+          Some common questions about getting involved with us.
+        </p>
+
+      </div>
+
+
+
+      <div class="faq-grid">
+
+
+        <details>
+
+          <summary>
+            How can I volunteer?
+          </summary>
+
+          <p>
+
+            You can visit our Get Involved page and submit
+            the volunteer registration form. Our team can
+            then connect with you regarding suitable
+            opportunities.
+
+          </p>
+
+        </details>
+
+
+
+        <details>
+
+          <summary>
+            How can I support the foundation?
+          </summary>
+
+          <p>
+
+            You can support our mission by volunteering,
+            contributing resources, spreading awareness,
+            or exploring partnership opportunities.
+
+          </p>
+
+        </details>
+
+
+
+        <details>
+
+          <summary>
+            Can organizations partner with you?
+          </summary>
+
+          <p>
+
+            Yes. Organizations and businesses can explore
+            partnership opportunities by contacting our team.
+
+          </p>
+
+        </details>
+
+
+
+        <details>
+
+          <summary>
+            Where does the foundation work?
+          </summary>
+
+          <p>
+
+            Our initiatives are focused on communities
+            in Chhattisgarh, India.
+
+          </p>
+
+        </details>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       CTA
+  ========================= -->
+
+  <section class="cta">
+
+    <div class="container">
+
+      <h2>
+        Let's Create Change Together
+      </h2>
+
+      <p>
+
+        Your support, time, and ideas can help us create
+        a stronger impact in communities.
+
+      </p>
+
+
+      <a
+        href="get-involved.html"
+        class="cta-button"
+      >
+        Get Involved
+      </a>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+
+        <!-- BRAND -->
+
+        <div class="footer-brand">
+
+          <h3>
+            InAmigos<span> Foundation</span>
+          </h3>
+
+          <p>
+
+            Working together to empower communities and
+            create a better, more inclusive future.
+
+          </p>
+
+        </div>
+
+
+
+        <!-- QUICK LINKS -->
+
+        <div class="footer-column">
+
+          <h4>
+            Quick Links
+          </h4>
+
+          <a href="index.html">
+            Home
+          </a>
+
+          <a href="about.html">
+            About
+          </a>
+
+          <a href="projects.html">
+            Projects
+          </a>
+
+          <a href="get-involved.html">
+            Get Involved
+          </a>
+
+          <a href="contact.html">
+            Contact
+          </a>
+
+        </div>
+
+
+
+        <!-- CONTACT -->
+
+        <div class="footer-column">
+
+          <h4>
+            Contact
+          </h4>
+
+          <a href="mailto:ashok807459@gmail.com">
+
+            Email Us
+
+          </a>
+
+          <a href="tel:+918102254939">
+
+            Call Us
+
+          </a>
+
+          <a href="#location">
+
+            Location
+
+          </a>
+
+        </div>
+
+
+      </div>
+
+
+
+      <div class="copyright">
+
+        © 2026 InAmigos Foundation.
+        All rights reserved.
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================= -->
+
+  <script>
+
+
+    /* MOBILE NAVIGATION */
+
+    const menuToggle =
+      document.getElementById("menuToggle");
+
+    const mainNav =
+      document.getElementById("mainNav");
+
+
+    menuToggle.addEventListener(
+      "click",
+      function () {
+
+        mainNav.classList.toggle("active");
+
+
+        const isOpen =
+          mainNav.classList.contains("active");
+
+
+        menuToggle.setAttribute(
+          "aria-expanded",
+          isOpen
+        );
+
+
+        menuToggle.setAttribute(
+          "aria-label",
+          isOpen
+            ? "Close navigation menu"
+            : "Open navigation menu"
+        );
+
+
+        menuToggle.textContent =
+          isOpen ? "✕" : "☰";
+
+      }
+    );
+
+
+
+    /* CLOSE MOBILE MENU
+       AFTER CLICKING A LINK */
+
+    mainNav
+      .querySelectorAll("a")
+      .forEach(function (link) {
+
+        link.addEventListener(
+          "click",
+          function () {
+
+            mainNav.classList.remove("active");
+
+
+            menuToggle.setAttribute(
+              "aria-expanded",
+              "false"
+            );
+
+
+            menuToggle.setAttribute(
+              "aria-label",
+              "Open navigation menu"
+            );
+
+
+            menuToggle.textContent = "☰";
+
+          }
+        );
+
+      });
+
+
+
+    /* CONTACT FORM */
+
+    const contactForm =
+      document.getElementById("contactForm");
+
+    const formMessage =
+      document.getElementById("formMessage");
+
+
+    contactForm.addEventListener(
+      "submit",
+      function (event) {
+
+        event.preventDefault();
+
+
+        formMessage.classList.add("show");
+
+
+        contactForm.reset();
+
+
+        setTimeout(
+          function () {
+
+            formMessage.classList.remove("show");
+
+          },
+          5000
+        );
+
+      }
+    );
+
+
+  </script>
+
+
+</body>
+
+</html>

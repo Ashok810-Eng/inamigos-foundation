@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Our Projects | InAmigos Foundation</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 85px;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: #1f2937;
+      background: #f8fafc;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    button,
+    input,
+    textarea,
+    select {
+      font-family: inherit;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: auto;
+    }
+
+    /* =========================
+       TOP BAR
+    ========================= */
+
+    .top-bar {
+      background: #166534;
+      color: white;
+      text-align: center;
+      padding: 9px 15px;
+      font-size: 14px;
+    }
+
+    /* =========================
+       NAVBAR
+    ========================= */
+
+    header {
+      background: white;
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar {
+      min-height: 75px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 23px;
+      font-weight: 800;
+      color: #166534;
+      white-space: nowrap;
+    }
+
+    .logo-icon {
+      font-size: 28px;
+    }
+
+    .logo-text h1 {
+      font-size: 23px;
+      line-height: 1;
+      margin-bottom: 3px;
+    }
+
+    .logo-text span {
+      display: block;
+      color: #f59e0b;
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    nav a {
+      font-size: 15px;
+      font-weight: 600;
+      color: #374151;
+      transition: 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #166534;
+    }
+
+    .nav-button {
+      background: #166534;
+      color: white !important;
+      padding: 11px 18px;
+      border-radius: 7px;
+    }
+
+    .nav-button:hover {
+      background: #14532d;
+    }
+
+    /* MOBILE MENU BUTTON */
+
+    .menu-toggle {
+      display: none;
+      border: none;
+      background: transparent;
+      color: #166534;
+      font-size: 30px;
+      cursor: pointer;
+      padding: 5px;
+      line-height: 1;
+    }
+
+    /* =========================
+       PAGE HERO
+    ========================= */
+
+    .page-hero {
+      background:
+        linear-gradient(
+          rgba(22, 101, 52, 0.85),
+          rgba(22, 101, 52, 0.85)
+        ),
+        url("https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1600&q=80");
+
+      background-size: cover;
+      background-position: center;
+
+      padding: 95px 20px;
+      text-align: center;
+      color: white;
+    }
+
+    .page-hero h1 {
+      font-size: clamp(38px, 6vw, 62px);
+      margin-bottom: 15px;
+    }
+
+    .page-hero p {
+      max-width: 720px;
+      margin: auto;
+      font-size: 18px;
+      opacity: 0.95;
+    }
+
+    /* =========================
+       INTRO
+    ========================= */
+
+    .intro {
+      padding: 75px 0 35px;
+      text-align: center;
+    }
+
+    .section-label {
+      color: #f59e0b;
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      margin-bottom: 10px;
+    }
+
+    .intro h2 {
+      font-size: 38px;
+      margin-bottom: 15px;
+      color: #111827;
+    }
+
+    .intro p {
+      max-width: 760px;
+      margin: auto;
+      color: #6b7280;
+    }
+
+    /* =========================
+       PROJECT GRID
+    ========================= */
+
+    .projects {
+      padding: 40px 0 90px;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+      transition:
+        transform 0.3s,
+        box-shadow 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-image {
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .project-content {
+      padding: 28px;
+    }
+
+    .project-tag {
+      display: inline-block;
+      background: #dcfce7;
+      color: #166534;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 6px 11px;
+      border-radius: 20px;
+      margin-bottom: 13px;
+    }
+
+    .project-content h3 {
+      font-size: 25px;
+      color: #111827;
+      margin-bottom: 12px;
+    }
+
+    .project-content p {
+      color: #6b7280;
+      margin-bottom: 18px;
+    }
+
+    .project-list {
+      list-style: none;
+      margin-bottom: 20px;
+    }
+
+    .project-list li {
+      margin-bottom: 8px;
+      color: #4b5563;
+      font-size: 14px;
+    }
+
+    .project-list li::before {
+      content: "✓";
+      color: #166534;
+      font-weight: bold;
+      margin-right: 8px;
+    }
+
+    .project-link {
+      display: inline-block;
+      color: #166534;
+      font-weight: 700;
+      transition: 0.3s;
+    }
+
+    .project-link:hover {
+      text-decoration: underline;
+      transform: translateX(3px);
+    }
+
+    /* =========================
+       IMPACT
+    ========================= */
+
+    .impact {
+      background: #166534;
+      color: white;
+      padding: 75px 0;
+      text-align: center;
+    }
+
+    .impact h2 {
+      font-size: 36px;
+      margin-bottom: 12px;
+    }
+
+    .impact > .container > p {
+      max-width: 700px;
+      margin: 0 auto 40px;
+      opacity: 0.9;
+    }
+
+    .impact-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+    }
+
+    .impact-item {
+      padding: 20px;
+      transition: transform 0.3s;
+    }
+
+    .impact-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .impact-number {
+      display: block;
+      font-size: 38px;
+      font-weight: 800;
+      margin-bottom: 5px;
+    }
+
+    .impact-label {
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .cta {
+      padding: 85px 20px;
+      text-align: center;
+      background: #fef3c7;
+    }
+
+    .cta h2 {
+      font-size: 38px;
+      color: #111827;
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      max-width: 650px;
+      margin: 0 auto 25px;
+      color: #6b7280;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: #166534;
+      color: white;
+      padding: 14px 25px;
+      border-radius: 7px;
+      font-weight: 700;
+      transition: 0.3s;
+    }
+
+    .cta-button:hover {
+      background: #14532d;
+      transform: translateY(-2px);
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #111827;
+      color: white;
+      padding: 50px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 35px;
+    }
+
+    .footer-brand h3 {
+      font-size: 23px;
+      margin-bottom: 12px;
+    }
+
+    .footer-brand h3 span {
+      color: #f59e0b;
+    }
+
+    .footer-brand p {
+      color: #9ca3af;
+      max-width: 430px;
+    }
+
+    .footer-column h4 {
+      margin-bottom: 13px;
+    }
+
+    .footer-column a {
+      display: block;
+      color: #9ca3af;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    .footer-column a:hover {
+      color: white;
+    }
+
+    .copyright {
+      border-top: 1px solid #374151;
+      padding-top: 20px;
+      text-align: center;
+      color: #9ca3af;
+      font-size: 13px;
+    }
+
+    /* =========================
+       TABLET
+    ========================= */
+
+    @media (max-width: 850px) {
+
+      .navbar {
+        min-height: 70px;
+        position: relative;
+        flex-wrap: wrap;
+      }
+
+      .menu-toggle {
+        display: block;
+        margin-left: auto;
+      }
+
+      .navbar nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+        padding: 20px 0;
+      }
+
+      .navbar nav.active {
+        display: flex;
+      }
+
+      .navbar nav a {
+        width: 100%;
+        text-align: center;
+        padding: 8px;
+      }
+
+      .nav-button {
+        display: block;
+      }
+
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .impact-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 550px) {
+
+      .top-bar {
+        font-size: 12px;
+        padding: 8px 10px;
+      }
+
+      .logo {
+        font-size: 20px;
+      }
+
+      .logo-icon {
+        font-size: 24px;
+      }
+
+      .logo-text h1 {
+        font-size: 20px;
+      }
+
+      .page-hero {
+        padding: 70px 20px;
+      }
+
+      .page-hero h1 {
+        font-size: 42px;
+      }
+
+      .page-hero p {
+        font-size: 16px;
+      }
+
+      .intro {
+        padding: 55px 0 25px;
+      }
+
+      .intro h2,
+      .impact h2,
+      .cta h2 {
+        font-size: 30px;
+      }
+
+      .project-content {
+        padding: 22px;
+      }
+
+      .project-content h3 {
+        font-size: 22px;
+      }
+
+      .project-image {
+        height: 220px;
+      }
+
+      .impact {
+        padding: 60px 0;
+      }
+
+      .impact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .cta {
+        padding: 65px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       TOP BAR
+  ========================== -->
+
+  <div class="top-bar">
+    Empowering Communities • Creating Sustainable Change
+  </div>
+
+
+  <!-- =========================
+       NAVBAR
+  ========================== -->
+
+  <header>
+
+    <div class="container navbar">
+
+      <a
+        href="index.html"
+        class="logo"
+        aria-label="InAmigos Foundation Home"
+      >
+
+        <div class="logo-icon">🤝</div>
+
+        <div class="logo-text">
+          <h1>InAmigos</h1>
+          <span>Foundation</span>
+        </div>
+
+      </a>
+
+
+      <!-- MOBILE MENU BUTTON -->
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+
+
+      <!-- NAVIGATION -->
+
+      <nav id="mainNav">
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="about.html">
+          About
+        </a>
+
+        <a href="projects.html" class="active">
+          Projects
+        </a>
+
+        <a href="index.html#mission">
+          Mission
+        </a>
+
+        <a href="get-involved.html">
+          Get Involved
+        </a>
+
+        <a href="contact.html" class="nav-button">
+          Contact Us
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================
+       PAGE HERO
+  ========================== -->
+
+  <section class="page-hero">
+
+    <div class="container">
+
+      <h1>Our Projects</h1>
+
+      <p>
+        Discover the initiatives through which InAmigos Foundation
+        works to create meaningful and sustainable change in communities.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       INTRO
+  ========================== -->
+
+  <section class="intro">
+
+    <div class="container">
+
+      <div class="section-label">
+        What We Do
+      </div>
+
+      <h2>
+        Creating Impact Through Action
+      </h2>
+
+      <p>
+        Our projects focus on education, women empowerment, food support,
+        animal welfare, and environmental sustainability. Every initiative
+        is designed to address real community needs and create lasting impact.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       PROJECTS
+  ========================== -->
+
+  <section class="projects">
+
+    <div class="container">
+
+      <div class="project-grid">
+
+
+        <!-- PROJECT 1 -->
+
+        <article class="project-card" id="education">
+
+          <img
+            class="project-image"
+            src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=900&q=80"
+            alt="Children receiving education"
+            loading="lazy"
+          >
+
+          <div class="project-content">
+
+            <span class="project-tag">
+              Education
+            </span>
+
+            <h3>
+              Education & Learning
+            </h3>
+
+            <p>
+              Supporting children and young learners by helping provide
+              access to education, learning resources, and opportunities
+              for personal development.
+            </p>
+
+            <ul class="project-list">
+              <li>Educational support</li>
+              <li>Learning resources</li>
+              <li>Community awareness</li>
+            </ul>
+
+            <a href="#education" class="project-link">
+              Learn More →
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- PROJECT 2 -->
+
+        <article class="project-card" id="women-empowerment">
+
+          <img
+            class="project-image"
+            src="https://images.unsplash.com/photo-1594708767771-a7502209ff51?auto=format&fit=crop&w=900&q=80"
+            alt="Women participating in empowerment activities"
+            loading="lazy"
+          >
+
+          <div class="project-content">
+
+            <span class="project-tag">
+              Women Empowerment
+            </span>
+
+            <h3>
+              Women Empowerment
+            </h3>
+
+            <p>
+              Creating opportunities for women through awareness,
+              skill development, support programs, and initiatives
+              that encourage financial and social independence.
+            </p>
+
+            <ul class="project-list">
+              <li>Skill development</li>
+              <li>Awareness programs</li>
+              <li>Women-led initiatives</li>
+            </ul>
+
+            <a href="#women-empowerment" class="project-link">
+              Learn More →
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- PROJECT 3 -->
+
+        <article class="project-card" id="food-support">
+
+          <img
+            class="project-image"
+            src="https://images.unsplash.com/photo-1593113646773-028c64a8f1b8?auto=format&fit=crop&w=900&q=80"
+            alt="Food distribution to community members"
+            loading="lazy"
+          >
+
+          <div class="project-content">
+
+            <span class="project-tag">
+              Food Support
+            </span>
+
+            <h3>
+              Food & Community Support
+            </h3>
+
+            <p>
+              Working with communities to support people facing food
+              insecurity and help ensure that essential nutritional
+              needs are not overlooked.
+            </p>
+
+            <ul class="project-list">
+              <li>Food distribution</li>
+              <li>Community support</li>
+              <li>Volunteer participation</li>
+            </ul>
+
+            <a href="#food-support" class="project-link">
+              Learn More →
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- PROJECT 4 -->
+
+        <article class="project-card" id="animal-welfare">
+
+          <img
+            class="project-image"
+            src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?auto=format&fit=crop&w=900&q=80"
+            alt="Animal welfare and care"
+            loading="lazy"
+          >
+
+          <div class="project-content">
+
+            <span class="project-tag">
+              Animal Welfare
+            </span>
+
+            <h3>
+              Animal Welfare
+            </h3>
+
+            <p>
+              Promoting compassion and responsible care for animals
+              through community awareness and support for animal welfare
+              initiatives.
+            </p>
+
+            <ul class="project-list">
+              <li>Animal care awareness</li>
+              <li>Community participation</li>
+              <li>Responsible animal welfare</li>
+            </ul>
+
+            <a href="#animal-welfare" class="project-link">
+              Learn More →
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- PROJECT 5 -->
+
+        <article class="project-card" id="environment">
+
+          <img
+            class="project-image"
+            src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=900&q=80"
+            alt="Environmental sustainability and greenery"
+            loading="lazy"
+          >
+
+          <div class="project-content">
+
+            <span class="project-tag">
+              Environment
+            </span>
+
+            <h3>
+              Environmental Sustainability
+            </h3>
+
+            <p>
+              Encouraging communities to take action for a cleaner,
+              greener, and more sustainable future through environmental
+              awareness initiatives.
+            </p>
+
+            <ul class="project-list">
+              <li>Environmental awareness</li>
+              <li>Green initiatives</li>
+              <li>Community participation</li>
+            </ul>
+
+            <a href="#environment" class="project-link">
+              Learn More →
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- PROJECT 6 -->
+
+        <article class="project-card" id="community">
+
+          <img
+            class="project-image"
+            src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=900&q=80"
+            alt="Community volunteers working together"
+            loading="lazy"
+          >
+
+          <div class="project-content">
+
+            <span class="project-tag">
+              Community
+            </span>
+
+            <h3>
+              Community Development
+            </h3>
+
+            <p>
+              Bringing volunteers and communities together to identify
+              local challenges and develop practical solutions that
+              create positive social impact.
+            </p>
+
+            <ul class="project-list">
+              <li>Volunteer engagement</li>
+              <li>Community initiatives</li>
+              <li>Social awareness</li>
+            </ul>
+
+            <a href="#community" class="project-link">
+              Learn More →
+            </a>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       IMPACT
+  ========================== -->
+
+  <section class="impact">
+
+    <div class="container">
+
+      <h2>
+        Our Impact
+      </h2>
+
+      <p>
+        Small actions can create meaningful change when communities
+        come together.
+      </p>
+
+      <div class="impact-grid">
+
+        <div class="impact-item">
+          <span class="impact-number">900+</span>
+          <span class="impact-label">
+            Women Empowered
+          </span>
+        </div>
+
+        <div class="impact-item">
+          <span class="impact-number">5+</span>
+          <span class="impact-label">
+            Major Initiatives
+          </span>
+        </div>
+
+        <div class="impact-item">
+          <span class="impact-number">2020</span>
+          <span class="impact-label">
+            Founded
+          </span>
+        </div>
+
+        <div class="impact-item">
+          <span class="impact-number">100+</span>
+          <span class="impact-label">
+            Community Activities
+          </span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       CTA
+  ========================== -->
+
+  <section class="cta">
+
+    <div class="container">
+
+      <h2>
+        Want to Make a Difference?
+      </h2>
+
+      <p>
+        Your time, skills, and support can help us reach more people
+        and create a stronger impact in communities.
+      </p>
+
+      <a
+        href="get-involved.html"
+        class="cta-button"
+      >
+        Get Involved
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+
+        <!-- BRAND -->
+
+        <div class="footer-brand">
+
+          <h3>
+            InAmigos<span> Foundation</span>
+          </h3>
+
+          <p>
+            Working together to empower communities and create
+            a better, more inclusive future.
+          </p>
+
+        </div>
+
+
+        <!-- QUICK LINKS -->
+
+        <div class="footer-column">
+
+          <h4>
+            Quick Links
+          </h4>
+
+          <a href="index.html">
+            Home
+          </a>
+
+          <a href="about.html">
+            About
+          </a>
+
+          <a href="projects.html">
+            Projects
+          </a>
+
+          <a href="get-involved.html">
+            Get Involved
+          </a>
+
+          <a href="contact.html">
+            Contact
+          </a>
+
+        </div>
+
+
+        <!-- FOCUS AREAS -->
+
+        <div class="footer-column">
+
+          <h4>
+            Focus Areas
+          </h4>
+
+          <a href="projects.html#education">
+            Education
+          </a>
+
+          <a href="projects.html#women-empowerment">
+            Women Empowerment
+          </a>
+
+          <a href="projects.html#food-support">
+            Food Support
+          </a>
+
+          <a href="projects.html#animal-welfare">
+            Animal Welfare
+          </a>
+
+          <a href="projects.html#environment">
+            Environment
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- COPYRIGHT -->
+
+      <div class="copyright">
+        © 2026 InAmigos Foundation. All rights reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       MOBILE MENU JAVASCRIPT
+  ========================== -->
+
+  <script>
+
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNav = document.getElementById("mainNav");
+
+
+    menuToggle.addEventListener("click", function () {
+
+      mainNav.classList.toggle("active");
+
+      const isOpen = mainNav.classList.contains("active");
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        isOpen
+      );
+
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen
+          ? "Close navigation menu"
+          : "Open navigation menu"
+      );
+
+      menuToggle.textContent =
+        isOpen ? "✕" : "☰";
+
+    });
+
+
+    mainNav.querySelectorAll("a").forEach(function (link) {
+
+      link.addEventListener("click", function () {
+
+        mainNav.classList.remove("active");
+
+        menuToggle.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+        menuToggle.setAttribute(
+          "aria-label",
+          "Open navigation menu"
+        );
+
+        menuToggle.textContent = "☰";
+
+      });
+
+    });
+
+  </script>
+
+</body>
+</html>

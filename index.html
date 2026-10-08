@@ -1,0 +1,1746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>InAmigos Foundation | Creating Change Together</title>
+
+  <meta
+    name="description"
+    content="InAmigos Foundation is a Chhattisgarh-based NGO working for education, women's empowerment, animal welfare, food support, and environmental sustainability."
+  />
+
+  <style>
+
+    /* =========================
+       GLOBAL STYLES
+    ========================== */
+
+    :root {
+      --primary: #176b59;
+      --primary-dark: #0f4f42;
+      --accent: #f2a541;
+      --accent-light: #fff3df;
+      --dark: #17221f;
+      --text: #4d5a56;
+      --light: #f7f8f5;
+      --white: #ffffff;
+      --border: #e5e9e6;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      --radius: 14px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 85px;
+    }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: var(--dark);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    textarea,
+    select {
+      font-family: inherit;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: auto;
+    }
+
+    .section {
+      padding: 90px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 50px;
+    }
+
+    .section-heading .label {
+      display: inline-block;
+      color: var(--primary);
+      background: #eaf5f1;
+      padding: 7px 15px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    .section-heading h2 {
+      font-size: 2.4rem;
+      line-height: 1.2;
+      margin-bottom: 15px;
+    }
+
+    .section-heading p {
+      color: var(--text);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 25px;
+      border-radius: 50px;
+      font-weight: 700;
+      transition: 0.3s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--dark);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(242, 165, 65, 0.35);
+    }
+
+    .btn-outline {
+      border: 2px solid var(--white);
+      color: var(--white);
+      margin-left: 10px;
+    }
+
+    .btn-outline:hover {
+      background: var(--white);
+      color: var(--primary);
+    }
+
+
+    /* =========================
+       TOP BAR
+    ========================== */
+
+    .top-bar {
+      background: var(--primary-dark);
+      color: var(--white);
+      font-size: 0.85rem;
+      padding: 8px 0;
+    }
+
+    .top-bar-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+
+    /* =========================
+       NAVBAR
+    ========================== */
+
+    header {
+      background: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+    }
+
+    .navbar {
+      min-height: 75px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--primary);
+    }
+
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+      background: var(--primary);
+      color: var(--white);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .logo-text h1 {
+      font-size: 1.15rem;
+      line-height: 1.1;
+    }
+
+    .logo-text span {
+      font-size: 0.72rem;
+      color: var(--text);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    nav a {
+      color: var(--dark);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    .nav-button {
+      background: var(--primary);
+      color: var(--white) !important;
+      padding: 10px 18px;
+      border-radius: 30px;
+    }
+
+    .nav-button:hover {
+      background: var(--primary-dark);
+    }
+
+    /* Mobile Menu Button */
+
+    .menu-toggle {
+      display: none;
+      border: none;
+      background: transparent;
+      color: var(--primary);
+      font-size: 30px;
+      cursor: pointer;
+      padding: 5px;
+      line-height: 1;
+    }
+
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      min-height: 650px;
+      display: flex;
+      align-items: center;
+      color: var(--white);
+
+      background:
+        linear-gradient(
+          rgba(8, 48, 39, 0.75),
+          rgba(8, 48, 39, 0.72)
+        ),
+        url("https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1600&q=85")
+        center/cover no-repeat;
+    }
+
+    .hero-content {
+      max-width: 760px;
+      padding: 90px 0;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 8px 15px;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+    }
+
+    .hero h2 {
+      font-size: clamp(2.6rem, 6vw, 4.5rem);
+      line-height: 1.08;
+      margin-bottom: 22px;
+    }
+
+    .hero h2 span {
+      color: var(--accent);
+    }
+
+    .hero p {
+      max-width: 650px;
+      font-size: 1.1rem;
+      color: #edf6f3;
+      margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+
+    /* =========================
+       TRUST / STATS
+    ========================== */
+
+    .stats-wrapper {
+      margin-top: -55px;
+      position: relative;
+      z-index: 5;
+    }
+
+    .stats {
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      padding: 28px 20px;
+    }
+
+    .stat {
+      text-align: center;
+      padding: 10px;
+      border-right: 1px solid var(--border);
+    }
+
+    .stat:last-child {
+      border-right: none;
+    }
+
+    .stat h3 {
+      font-size: 2rem;
+      color: var(--primary);
+    }
+
+    .stat p {
+      color: var(--text);
+      font-size: 0.9rem;
+    }
+
+
+    /* =========================
+       ABOUT
+    ========================== */
+
+    .about {
+      background: var(--light);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 65px;
+      align-items: center;
+    }
+
+    .about-image {
+      position: relative;
+    }
+
+    .about-image img {
+      width: 100%;
+      height: 450px;
+      object-fit: cover;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .experience-box {
+      position: absolute;
+      bottom: -25px;
+      right: -20px;
+      background: var(--accent);
+      padding: 22px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .experience-box strong {
+      display: block;
+      font-size: 1.8rem;
+    }
+
+    .about-content h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .about-content p {
+      color: var(--text);
+      margin-bottom: 18px;
+    }
+
+    .check-list {
+      list-style: none;
+      margin: 25px 0;
+    }
+
+    .check-list li {
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .check-list li::before {
+      content: "✓";
+      display: inline-grid;
+      place-items: center;
+      width: 24px;
+      height: 24px;
+      background: #e6f3ef;
+      color: var(--primary);
+      border-radius: 50%;
+      margin-right: 10px;
+      font-weight: bold;
+    }
+
+
+    /* =========================
+       PROJECTS
+    ========================== */
+
+    .projects {
+      background: var(--white);
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .project-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+    }
+
+    .project-content {
+      padding: 24px;
+    }
+
+    .project-tag {
+      color: var(--primary);
+      background: #eaf5f1;
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    .project-content h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+
+    .project-content p {
+      color: var(--text);
+      font-size: 0.93rem;
+    }
+
+    .project-link {
+      display: inline-block;
+      margin-top: 18px;
+      color: var(--primary);
+      font-weight: 700;
+      transition: 0.3s ease;
+    }
+
+    .project-link:hover {
+      color: var(--primary-dark);
+      transform: translateX(4px);
+    }
+
+
+    /* =========================
+       MISSION
+    ========================== */
+
+    .mission {
+      background: var(--primary);
+      color: var(--white);
+    }
+
+    .mission .section-heading .label {
+      background: rgba(255, 255, 255, 0.12);
+      color: var(--accent);
+    }
+
+    .mission .section-heading h2 {
+      color: var(--white);
+    }
+
+    .mission .section-heading p {
+      color: #d8ebe5;
+    }
+
+    .mission-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .mission-card {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 30px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      transition: 0.3s;
+    }
+
+    .mission-card:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .mission-icon {
+      width: 55px;
+      height: 55px;
+      background: var(--accent);
+      color: var(--dark);
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    .mission-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .mission-card p {
+      color: #d9e9e4;
+      font-size: 0.94rem;
+    }
+
+
+    /* =========================
+       GET INVOLVED
+    ========================== */
+
+    .involved {
+      background: var(--accent-light);
+    }
+
+    .involved-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .involved-card {
+      background: var(--white);
+      padding: 30px;
+      border-radius: var(--radius);
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+      transition: 0.3s ease;
+    }
+
+    .involved-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow);
+    }
+
+    .involved-card .icon {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    .involved-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .involved-card p {
+      color: var(--text);
+      font-size: 0.93rem;
+      margin-bottom: 18px;
+    }
+
+    .text-link {
+      color: var(--primary);
+      font-weight: 700;
+      transition: 0.3s ease;
+    }
+
+    .text-link:hover {
+      color: var(--primary-dark);
+    }
+
+
+    /* =========================
+       CTA
+    ========================== */
+
+    .cta {
+      padding: 85px 20px;
+      text-align: center;
+      background:
+        linear-gradient(
+          rgba(23, 107, 89, 0.93),
+          rgba(23, 107, 89, 0.93)
+        ),
+        url("https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=1600&q=80")
+        center/cover;
+      color: var(--white);
+    }
+
+    .cta h2 {
+      font-size: 2.6rem;
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      max-width: 650px;
+      margin: 0 auto 28px;
+      color: #e0eee9;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      background: #10201c;
+      color: var(--white);
+      padding: 55px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+      padding-bottom: 40px;
+    }
+
+    .footer-brand h3 {
+      margin-bottom: 15px;
+    }
+
+    .footer-brand p {
+      color: #b9cbc5;
+      max-width: 350px;
+      font-size: 0.9rem;
+    }
+
+    footer h4 {
+      margin-bottom: 15px;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 9px;
+    }
+
+    .footer-links a {
+      color: #b9cbc5;
+      font-size: 0.9rem;
+      transition: 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+
+    .copyright {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 20px;
+      text-align: center;
+      color: #9db0aa;
+      font-size: 0.85rem;
+    }
+
+
+    /* =========================
+       TABLET RESPONSIVE
+    ========================== */
+
+    @media (max-width: 1000px) {
+
+      nav {
+        gap: 16px;
+      }
+
+      .about-grid {
+        gap: 40px;
+      }
+
+      .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .mission-grid,
+      .involved-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    }
+
+
+    /* =========================
+       MOBILE NAVIGATION
+    ========================== */
+
+    @media (max-width: 850px) {
+
+      .navbar {
+        min-height: 70px;
+        position: relative;
+        flex-wrap: wrap;
+      }
+
+      .menu-toggle {
+        display: block;
+        margin-left: auto;
+      }
+
+      .navbar nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+        padding: 20px 0;
+      }
+
+      .navbar nav.active {
+        display: flex;
+      }
+
+      .navbar nav a {
+        width: 100%;
+        text-align: center;
+        padding: 8px;
+      }
+
+      .nav-button {
+        display: block;
+      }
+
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 700px) {
+
+      .top-bar {
+        display: none;
+      }
+
+      .hero {
+        min-height: 580px;
+      }
+
+      .hero-content {
+        padding: 70px 0;
+      }
+
+      .hero h2 {
+        font-size: 2.7rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .btn-outline {
+        margin-left: 0;
+      }
+
+      .stats {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px 10px;
+      }
+
+      .stat {
+        padding: 12px 8px;
+      }
+
+      .stat:nth-child(2) {
+        border-right: none;
+      }
+
+      .stat:nth-child(-n + 2) {
+        border-bottom: 1px solid var(--border);
+      }
+
+      .stat h3 {
+        font-size: 1.6rem;
+      }
+
+      .section {
+        padding: 65px 0;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project-grid,
+      .mission-grid,
+      .involved-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-heading h2,
+      .about-content h2 {
+        font-size: 2rem;
+      }
+
+      .about-image img {
+        height: 350px;
+      }
+
+      .experience-box {
+        right: 10px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .cta h2 {
+        font-size: 2rem;
+      }
+
+    }
+
+
+    /* =========================
+       SMALL MOBILE
+    ========================== */
+
+    @media (max-width: 450px) {
+
+      .container {
+        width: 90%;
+      }
+
+      .logo-text h1 {
+        font-size: 1rem;
+      }
+
+      .logo-text span {
+        font-size: 0.65rem;
+      }
+
+      .logo-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 1rem;
+      }
+
+      .hero h2 {
+        font-size: 2.3rem;
+      }
+
+      .hero-badge {
+        font-size: 0.8rem;
+      }
+
+      .stats {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .stat h3 {
+        font-size: 1.4rem;
+      }
+
+      .stat p {
+        font-size: 0.8rem;
+      }
+
+      .about-image img {
+        height: 300px;
+      }
+
+      .experience-box {
+        padding: 15px;
+        font-size: 0.85rem;
+      }
+
+      .experience-box strong {
+        font-size: 1.5rem;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+  <!-- =========================
+       TOP BAR
+  ========================== -->
+
+  <div class="top-bar">
+
+    <div class="container top-bar-content">
+
+      <span>📍 Chhattisgarh, India</span>
+
+      <span>🤝 Building communities. Creating change.</span>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       NAVIGATION
+  ========================== -->
+
+  <header>
+
+    <div class="container navbar">
+
+      <a href="index.html" class="logo" aria-label="InAmigos Foundation Home">
+
+        <div class="logo-icon">
+          🤝
+        </div>
+
+        <div class="logo-text">
+          <h1>InAmigos</h1>
+          <span>Foundation</span>
+        </div>
+
+      </a>
+
+
+      <!-- Mobile Menu Button -->
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+
+
+      <nav id="mainNav">
+
+        <a href="index.html">Home</a>
+
+        <a href="about.html">About Us</a>
+
+        <a href="projects.html">Projects</a>
+
+        <a href="#mission">Mission</a>
+
+        <a href="get-involved.html">Get Involved</a>
+
+        <a href="contact.html" class="nav-button">
+          Contact Us
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================
+       HERO
+  ========================== -->
+
+  <main>
+
+    <section class="hero" id="home">
+
+      <div class="container">
+
+        <div class="hero-content">
+
+          <span class="hero-badge">
+            🌱 Together for a better tomorrow
+          </span>
+
+          <h2>
+            Small Actions.
+            <span>Big Change.</span>
+          </h2>
+
+          <p>
+            InAmigos Foundation works with communities to create meaningful
+            change through education, women's empowerment, animal welfare,
+            food support, and environmental sustainability.
+          </p>
+
+          <div class="hero-buttons">
+
+            <a href="#involved" class="btn btn-primary">
+              Join the Movement →
+            </a>
+
+            <a href="#projects" class="btn btn-outline">
+              Explore Our Work
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         IMPACT STATS
+    ========================== -->
+
+    <div class="stats-wrapper">
+
+      <div class="container">
+
+        <div class="stats">
+
+          <div class="stat">
+            <h3>900+</h3>
+            <p>Women Empowered</p>
+          </div>
+
+          <div class="stat">
+            <h3>5</h3>
+            <p>Active Projects</p>
+          </div>
+
+          <div class="stat">
+            <h3>2020</h3>
+            <p>Founded</p>
+          </div>
+
+          <div class="stat">
+            <h3>100%</h3>
+            <p>Commitment to Impact</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section class="section about" id="about">
+
+      <div class="container about-grid">
+
+        <div class="about-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1593113630400-ea4288922497?auto=format&fit=crop&w=1000&q=85"
+            alt="Volunteers working with community"
+            loading="lazy"
+          />
+
+          <div class="experience-box">
+
+            <strong>5+</strong>
+
+            Years of Impact
+
+          </div>
+
+        </div>
+
+
+        <div class="about-content">
+
+          <span class="section-heading label">
+            ABOUT INAMIGOS
+          </span>
+
+          <h2>
+            Working together to create meaningful change.
+          </h2>
+
+          <p>
+            InAmigos Foundation is a Chhattisgarh-based non-profit
+            organization focused on creating an inclusive and sustainable
+            society.
+          </p>
+
+          <p>
+            We work directly with communities to understand their challenges
+            and develop initiatives that create long-term impact rather than
+            temporary solutions.
+          </p>
+
+          <ul class="check-list">
+
+            <li>Community-focused initiatives</li>
+
+            <li>Education and skill development</li>
+
+            <li>Women's empowerment</li>
+
+            <li>Animal welfare and environmental protection</li>
+
+          </ul>
+
+          <a href="about.html" class="btn btn-primary">
+            Discover Our Work →
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROJECTS
+    ========================== -->
+
+    <section class="section projects" id="projects">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="label">
+            OUR PROJECTS
+          </span>
+
+          <h2>
+            Turning compassion into action.
+          </h2>
+
+          <p>
+            Our initiatives address different social and environmental
+            challenges while creating opportunities for communities to grow.
+          </p>
+
+        </div>
+
+
+        <div class="project-grid">
+
+
+          <!-- PROJECT 1 -->
+
+          <article class="project-card">
+
+            <img
+              src="https://images.unsplash.com/photo-1593113598332-cd59a93f9724?auto=format&fit=crop&w=800&q=85"
+              alt="Food distribution project"
+              loading="lazy"
+            />
+
+            <div class="project-content">
+
+              <span class="project-tag">
+                COMMUNITY SUPPORT
+              </span>
+
+              <h3>Project Seva</h3>
+
+              <p>
+                Providing food, clothing, and immediate support to
+                underprivileged communities and people affected by crisis.
+              </p>
+
+              <a href="projects.html" class="project-link">
+                Explore Project →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- PROJECT 2 -->
+
+          <article class="project-card">
+
+            <img
+              src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=800&q=85"
+              alt="Children learning"
+              loading="lazy"
+            />
+
+            <div class="project-content">
+
+              <span class="project-tag">
+                EDUCATION
+              </span>
+
+              <h3>Project Bachpanshala</h3>
+
+              <p>
+                Supporting children in underserved areas with books,
+                learning resources, digital tools, and educational programs.
+              </p>
+
+              <a href="projects.html" class="project-link">
+                Explore Project →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- PROJECT 3 -->
+
+          <article class="project-card">
+
+            <img
+              src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=85"
+              alt="Women empowerment"
+              loading="lazy"
+            />
+
+            <div class="project-content">
+
+              <span class="project-tag">
+                WOMEN EMPOWERMENT
+              </span>
+
+              <h3>Project Udaan</h3>
+
+              <p>
+                Helping women develop skills, explore entrepreneurship,
+                and work towards financial independence.
+              </p>
+
+              <a href="projects.html" class="project-link">
+                Explore Project →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- PROJECT 4 -->
+
+          <article class="project-card">
+
+            <img
+              src="https://images.unsplash.com/photo-1601758064952-5a6b8ffd7bc8?auto=format&fit=crop&w=800&q=85"
+              alt="Animal welfare"
+              loading="lazy"
+            />
+
+            <div class="project-content">
+
+              <span class="project-tag">
+                ANIMAL WELFARE
+              </span>
+
+              <h3>Project Jeev</h3>
+
+              <p>
+                Supporting stray and abandoned animals through rescue,
+                treatment, care, and welfare awareness initiatives.
+              </p>
+
+              <a href="projects.html" class="project-link">
+                Explore Project →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- PROJECT 5 -->
+
+          <article class="project-card">
+
+            <img
+              src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=800&q=85"
+              alt="Environmental protection"
+              loading="lazy"
+            />
+
+            <div class="project-content">
+
+              <span class="project-tag">
+                ENVIRONMENT
+              </span>
+
+              <h3>Project Prakriti</h3>
+
+              <p>
+                Promoting environmental responsibility through tree
+                plantation, awareness campaigns, and sustainable practices.
+              </p>
+
+              <a href="projects.html" class="project-link">
+                Explore Project →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- PROJECT 6 -->
+
+          <article class="project-card">
+
+            <img
+              src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?auto=format&fit=crop&w=800&q=85"
+              alt="Volunteers helping community"
+              loading="lazy"
+            />
+
+            <div class="project-content">
+
+              <span class="project-tag">
+                VOLUNTEERING
+              </span>
+
+              <h3>Community Volunteers</h3>
+
+              <p>
+                Bringing passionate people together to support local
+                communities and contribute their time and skills.
+              </p>
+
+              <a href="get-involved.html" class="project-link">
+                Get Involved →
+              </a>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         MISSION
+    ========================== -->
+
+    <section class="section mission" id="mission">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="label">
+            OUR MISSION
+          </span>
+
+          <h2>
+            Creating impact where it matters most.
+          </h2>
+
+          <p>
+            We believe lasting social change happens when communities,
+            volunteers, organizations, and individuals work together.
+          </p>
+
+        </div>
+
+
+        <div class="mission-grid">
+
+
+          <div class="mission-card">
+
+            <div class="mission-icon">
+              📚
+            </div>
+
+            <h3>Education</h3>
+
+            <p>
+              Making learning opportunities and educational resources
+              accessible to children and underserved communities.
+            </p>
+
+          </div>
+
+
+          <div class="mission-card">
+
+            <div class="mission-icon">
+              👩
+            </div>
+
+            <h3>Empowerment</h3>
+
+            <p>
+              Helping women develop skills, confidence, and opportunities
+              to become financially independent.
+            </p>
+
+          </div>
+
+
+          <div class="mission-card">
+
+            <div class="mission-icon">
+              🌱
+            </div>
+
+            <h3>Sustainability</h3>
+
+            <p>
+              Encouraging responsible environmental practices and building
+              awareness about protecting our planet.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         GET INVOLVED
+    ========================== -->
+
+    <section class="section involved" id="involved">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="label">
+            GET INVOLVED
+          </span>
+
+          <h2>
+            You can be part of the change.
+          </h2>
+
+          <p>
+            Whether you have time, skills, resources, or ideas, there are
+            many ways to support our mission.
+          </p>
+
+        </div>
+
+
+        <div class="involved-grid">
+
+
+          <div class="involved-card">
+
+            <div class="icon">
+              🙋
+            </div>
+
+            <h3>Volunteer</h3>
+
+            <p>
+              Share your time and skills to support our community projects
+              and social initiatives.
+            </p>
+
+            <a href="get-involved.html" class="text-link">
+              Become a Volunteer →
+            </a>
+
+          </div>
+
+
+          <div class="involved-card">
+
+            <div class="icon">
+              ❤️
+            </div>
+
+            <h3>Donate</h3>
+
+            <p>
+              Your contribution can help us provide education, food,
+              healthcare, and community support.
+            </p>
+
+            <a href="get-involved.html" class="text-link">
+              Support Our Work →
+            </a>
+
+          </div>
+
+
+          <div class="involved-card">
+
+            <div class="icon">
+              🤝
+            </div>
+
+            <h3>Partner With Us</h3>
+
+            <p>
+              Collaborate with us through CSR programs, partnerships,
+              campaigns, and community initiatives.
+            </p>
+
+            <a href="get-involved.html" class="text-link">
+              Partner With Us →
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CTA
+    ========================== -->
+
+    <section class="cta" id="contact">
+
+      <div class="container">
+
+        <h2>
+          Together, we can create a better tomorrow.
+        </h2>
+
+        <p>
+          Join InAmigos Foundation and become part of a community working
+          towards education, empowerment, compassion, and sustainability.
+        </p>
+
+        <a href="contact.html" class="btn btn-primary">
+          Contact Us →
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+
+        <div class="footer-brand">
+
+          <h3>🤝 InAmigos Foundation</h3>
+
+          <p>
+            Building inclusive communities and creating meaningful
+            social impact through collective action.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <h4>Explore</h4>
+
+          <ul class="footer-links">
+
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+
+            <li>
+              <a href="about.html">About Us</a>
+            </li>
+
+            <li>
+              <a href="projects.html">Projects</a>
+            </li>
+
+            <li>
+              <a href="index.html#mission">Our Mission</a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <div>
+
+          <h4>Get Involved</h4>
+
+          <ul class="footer-links">
+
+            <li>
+              <a href="get-involved.html">Volunteer</a>
+            </li>
+
+            <li>
+              <a href="get-involved.html">Donate</a>
+            </li>
+
+            <li>
+              <a href="get-involved.html">CSR Partnership</a>
+            </li>
+
+            <li>
+              <a href="contact.html">Contact</a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <div>
+
+          <h4>Location</h4>
+
+          <ul class="footer-links">
+
+            <li>
+              <span>📍 Chhattisgarh, India</span>
+            </li>
+
+            <li>
+              <span>🌱 Social Impact</span>
+            </li>
+
+            <li>
+              <span>🤝 Community Development</span>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+
+      <div class="copyright">
+
+        <p>
+          © 2026 InAmigos Foundation. All rights reserved.
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       MOBILE MENU JAVASCRIPT
+  ========================== -->
+
+  <script>
+
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNav = document.getElementById("mainNav");
+
+    menuToggle.addEventListener("click", function () {
+
+      mainNav.classList.toggle("active");
+
+      const isOpen = mainNav.classList.contains("active");
+
+      menuToggle.setAttribute("aria-expanded", isOpen);
+
+      menuToggle.textContent = isOpen ? "✕" : "☰";
+
+    });
+
+
+    /* Close mobile menu after clicking a link */
+
+    mainNav.querySelectorAll("a").forEach(function (link) {
+
+      link.addEventListener("click", function () {
+
+        mainNav.classList.remove("active");
+
+        menuToggle.setAttribute("aria-expanded", "false");
+
+        menuToggle.textContent = "☰";
+
+      });
+
+    });
+
+  </script>
+
+
+</body>
+</html>

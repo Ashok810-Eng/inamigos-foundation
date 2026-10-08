@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Get Involved | InAmigos Foundation</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 85px;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: #1f2937;
+      background: #f8fafc;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    button,
+    input,
+    textarea,
+    select {
+      font-family: inherit;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: auto;
+    }
+
+    /* =========================
+       TOP BAR
+    ========================== */
+
+    .top-bar {
+      background: #166534;
+      color: white;
+      text-align: center;
+      padding: 9px 15px;
+      font-size: 14px;
+    }
+
+    /* =========================
+       NAVBAR
+    ========================== */
+
+    header {
+      background: white;
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar {
+      min-height: 75px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 23px;
+      font-weight: 800;
+      color: #166534;
+      white-space: nowrap;
+    }
+
+    .logo-icon {
+      font-size: 28px;
+    }
+
+    .logo-text h1 {
+      font-size: 23px;
+      line-height: 1;
+      margin-bottom: 3px;
+    }
+
+    .logo-text span {
+      display: block;
+      color: #f59e0b;
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    nav a {
+      font-size: 15px;
+      font-weight: 600;
+      color: #374151;
+      transition: 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #166534;
+    }
+
+    .nav-button {
+      background: #166534;
+      color: white !important;
+      padding: 11px 18px;
+      border-radius: 7px;
+    }
+
+    .nav-button:hover {
+      background: #14532d;
+    }
+
+    /* MOBILE MENU */
+
+    .menu-toggle {
+      display: none;
+      border: none;
+      background: transparent;
+      color: #166534;
+      font-size: 30px;
+      cursor: pointer;
+      padding: 5px;
+      line-height: 1;
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .page-hero {
+      background:
+        linear-gradient(
+          rgba(22, 101, 52, 0.87),
+          rgba(22, 101, 52, 0.87)
+        ),
+        url("https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=1600&q=80");
+
+      background-size: cover;
+      background-position: center;
+
+      padding: 100px 20px;
+      text-align: center;
+      color: white;
+    }
+
+    .page-hero h1 {
+      font-size: clamp(38px, 6vw, 60px);
+      margin-bottom: 15px;
+    }
+
+    .page-hero p {
+      max-width: 720px;
+      margin: auto;
+      font-size: 18px;
+      opacity: 0.95;
+    }
+
+    /* =========================
+       INTRO
+    ========================== */
+
+    .intro {
+      padding: 75px 0 45px;
+      text-align: center;
+    }
+
+    .section-label {
+      color: #f59e0b;
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      margin-bottom: 10px;
+    }
+
+    .intro h2 {
+      font-size: 38px;
+      color: #111827;
+      margin-bottom: 15px;
+    }
+
+    .intro p {
+      max-width: 750px;
+      margin: auto;
+      color: #6b7280;
+    }
+
+    /* =========================
+       INVOLVEMENT CARDS
+    ========================== */
+
+    .involvement {
+      padding: 30px 0 90px;
+    }
+
+    .involvement-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+
+    .involvement-card {
+      background: white;
+      padding: 35px;
+      border-radius: 15px;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+      transition:
+        transform 0.3s,
+        box-shadow 0.3s;
+    }
+
+    .involvement-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    }
+
+    .icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 12px;
+      background: #dcfce7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .involvement-card h3 {
+      font-size: 25px;
+      margin-bottom: 12px;
+      color: #111827;
+    }
+
+    .involvement-card p {
+      color: #6b7280;
+      margin-bottom: 18px;
+    }
+
+    .involvement-card ul {
+      list-style: none;
+      margin-bottom: 20px;
+    }
+
+    .involvement-card li {
+      margin-bottom: 8px;
+      color: #4b5563;
+    }
+
+    .involvement-card li::before {
+      content: "✓";
+      color: #166534;
+      font-weight: bold;
+      margin-right: 8px;
+    }
+
+    .card-button {
+      display: inline-block;
+      background: #166534;
+      color: white;
+      padding: 11px 18px;
+      border-radius: 7px;
+      font-weight: 700;
+      transition: 0.3s;
+    }
+
+    .card-button:hover {
+      background: #14532d;
+      transform: translateY(-2px);
+    }
+
+    /* =========================
+       VOLUNTEER SECTION
+    ========================== */
+
+    .volunteer-section {
+      background: #166534;
+      color: white;
+      padding: 80px 0;
+    }
+
+    .volunteer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .volunteer-text h2 {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .volunteer-text p {
+      opacity: 0.9;
+      margin-bottom: 25px;
+    }
+
+    .benefits {
+      list-style: none;
+    }
+
+    .benefits li {
+      margin-bottom: 12px;
+      font-size: 16px;
+    }
+
+    .benefits li::before {
+      content: "✓";
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    /* =========================
+       FORM
+    ========================== */
+
+    .volunteer-form {
+      background: white;
+      color: #1f2937;
+      padding: 30px;
+      border-radius: 14px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    }
+
+    .volunteer-form h3 {
+      font-size: 25px;
+      margin-bottom: 20px;
+      color: #111827;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #d1d5db;
+      border-radius: 7px;
+      font-size: 14px;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: #166534;
+      box-shadow: 0 0 0 3px rgba(22, 101, 52, 0.1);
+    }
+
+    .form-group textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .submit-button {
+      width: 100%;
+      border: none;
+      background: #f59e0b;
+      color: #111827;
+      padding: 13px;
+      border-radius: 7px;
+      font-weight: 800;
+      cursor: pointer;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    .submit-button:hover {
+      background: #d97706;
+      transform: translateY(-2px);
+    }
+
+    .form-message {
+      display: none;
+      margin-top: 15px;
+      padding: 12px;
+      border-radius: 7px;
+      background: #dcfce7;
+      color: #166534;
+      font-size: 14px;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .form-message.show {
+      display: block;
+    }
+
+    /* =========================
+       SUPPORT CTA
+    ========================== */
+
+    .cta {
+      padding: 85px 20px;
+      text-align: center;
+      background: #fef3c7;
+    }
+
+    .cta h2 {
+      font-size: 38px;
+      color: #111827;
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      max-width: 650px;
+      margin: 0 auto 25px;
+      color: #6b7280;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: #166534;
+      color: white;
+      padding: 14px 25px;
+      border-radius: 7px;
+      font-weight: 700;
+      transition: 0.3s;
+    }
+
+    .cta-button:hover {
+      background: #14532d;
+      transform: translateY(-2px);
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      background: #111827;
+      color: white;
+      padding: 50px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 35px;
+    }
+
+    .footer-brand h3 {
+      font-size: 23px;
+      margin-bottom: 12px;
+    }
+
+    .footer-brand h3 span {
+      color: #f59e0b;
+    }
+
+    .footer-brand p {
+      color: #9ca3af;
+      max-width: 430px;
+    }
+
+    .footer-column h4 {
+      margin-bottom: 13px;
+    }
+
+    .footer-column a {
+      display: block;
+      color: #9ca3af;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    .footer-column a:hover {
+      color: white;
+    }
+
+    .copyright {
+      border-top: 1px solid #374151;
+      padding-top: 20px;
+      text-align: center;
+      color: #9ca3af;
+      font-size: 13px;
+    }
+
+    /* =========================
+       TABLET
+    ========================== */
+
+    @media (max-width: 850px) {
+
+      .navbar {
+        min-height: 70px;
+        position: relative;
+        flex-wrap: wrap;
+      }
+
+      .menu-toggle {
+        display: block;
+        margin-left: auto;
+      }
+
+      .navbar nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+        padding: 20px 0;
+      }
+
+      .navbar nav.active {
+        display: flex;
+      }
+
+      .navbar nav a {
+        width: 100%;
+        text-align: center;
+        padding: 8px;
+      }
+
+      .nav-button {
+        display: block;
+      }
+
+      .involvement-grid,
+      .volunteer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .volunteer-text {
+        text-align: center;
+      }
+
+      .benefits {
+        display: inline-block;
+        text-align: left;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 550px) {
+
+      .top-bar {
+        font-size: 12px;
+        padding: 8px 10px;
+      }
+
+      .logo {
+        font-size: 20px;
+      }
+
+      .logo-icon {
+        font-size: 24px;
+      }
+
+      .logo-text h1 {
+        font-size: 20px;
+      }
+
+      .page-hero {
+        padding: 70px 20px;
+      }
+
+      .page-hero h1 {
+        font-size: 42px;
+      }
+
+      .page-hero p {
+        font-size: 16px;
+      }
+
+      .intro {
+        padding: 55px 0 30px;
+      }
+
+      .intro h2,
+      .volunteer-text h2,
+      .cta h2 {
+        font-size: 30px;
+      }
+
+      .involvement {
+        padding-bottom: 65px;
+      }
+
+      .involvement-card {
+        padding: 25px;
+      }
+
+      .involvement-card h3 {
+        font-size: 22px;
+      }
+
+      .volunteer-section {
+        padding: 60px 0;
+      }
+
+      .volunteer-form {
+        padding: 22px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .cta {
+        padding: 65px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       TOP BAR
+  ========================== -->
+
+  <div class="top-bar">
+    Empowering Communities • Creating Sustainable Change
+  </div>
+
+
+  <!-- =========================
+       NAVBAR
+  ========================== -->
+
+  <header>
+
+    <div class="container navbar">
+
+      <a
+        href="index.html"
+        class="logo"
+        aria-label="InAmigos Foundation Home"
+      >
+
+        <div class="logo-icon">🤝</div>
+
+        <div class="logo-text">
+          <h1>InAmigos</h1>
+          <span>Foundation</span>
+        </div>
+
+      </a>
+
+
+      <!-- MOBILE MENU BUTTON -->
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+
+
+      <!-- NAVIGATION -->
+
+      <nav id="mainNav">
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="about.html">
+          About
+        </a>
+
+        <a href="projects.html">
+          Projects
+        </a>
+
+        <a href="index.html#mission">
+          Mission
+        </a>
+
+        <a
+          href="get-involved.html"
+          class="active"
+        >
+          Get Involved
+        </a>
+
+        <a
+          href="contact.html"
+          class="nav-button"
+        >
+          Contact Us
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================
+       HERO
+  ========================== -->
+
+  <section class="page-hero">
+
+    <div class="container">
+
+      <h1>
+        Get Involved
+      </h1>
+
+      <p>
+        There are many ways you can support our mission and help
+        create positive change in communities.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       INTRO
+  ========================== -->
+
+  <section class="intro">
+
+    <div class="container">
+
+      <div class="section-label">
+        Make A Difference
+      </div>
+
+      <h2>
+        How You Can Help
+      </h2>
+
+      <p>
+        Whether you volunteer your time, contribute resources,
+        or support our initiatives, every contribution can help
+        us reach more people and create lasting impact.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       INVOLVEMENT CARDS
+  ========================== -->
+
+  <section class="involvement">
+
+    <div class="container">
+
+      <div class="involvement-grid">
+
+
+        <!-- VOLUNTEER -->
+
+        <article class="involvement-card">
+
+          <div class="icon">
+            🤝
+          </div>
+
+          <h3>
+            Volunteer
+          </h3>
+
+          <p>
+            Share your time and skills with our community initiatives.
+            Volunteers play an important role in helping us reach
+            people and organize activities.
+          </p>
+
+          <ul>
+
+            <li>
+              Community activities
+            </li>
+
+            <li>
+              Educational initiatives
+            </li>
+
+            <li>
+              Awareness campaigns
+            </li>
+
+            <li>
+              Event support
+            </li>
+
+          </ul>
+
+          <a
+            href="#volunteer-form"
+            class="card-button"
+          >
+            Become a Volunteer
+          </a>
+
+        </article>
+
+
+        <!-- DONATE -->
+
+        <article class="involvement-card">
+
+          <div class="icon">
+            ❤️
+          </div>
+
+          <h3>
+            Donate
+          </h3>
+
+          <p>
+            Your contribution can help support our community programs
+            and provide resources to people who need them.
+          </p>
+
+          <ul>
+
+            <li>
+              Support education
+            </li>
+
+            <li>
+              Help food initiatives
+            </li>
+
+            <li>
+              Support women empowerment
+            </li>
+
+            <li>
+              Support community programs
+            </li>
+
+          </ul>
+
+          <a
+            href="#support"
+            class="card-button"
+          >
+            Support Our Mission
+          </a>
+
+        </article>
+
+
+        <!-- PARTNER -->
+
+        <article class="involvement-card">
+
+          <div class="icon">
+            🌱
+          </div>
+
+          <h3>
+            Partner With Us
+          </h3>
+
+          <p>
+            Organizations and businesses can collaborate with us
+            to create larger and more sustainable community impact.
+          </p>
+
+          <ul>
+
+            <li>
+              Corporate partnerships
+            </li>
+
+            <li>
+              Community collaborations
+            </li>
+
+            <li>
+              Skill-based partnerships
+            </li>
+
+            <li>
+              Social initiatives
+            </li>
+
+          </ul>
+
+          <a
+            href="contact.html"
+            class="card-button"
+          >
+            Become a Partner
+          </a>
+
+        </article>
+
+
+        <!-- SPREAD AWARENESS -->
+
+        <article class="involvement-card">
+
+          <div class="icon">
+            📢
+          </div>
+
+          <h3>
+            Spread Awareness
+          </h3>
+
+          <p>
+            Help us reach more people by sharing our mission,
+            initiatives, and community stories with your network.
+          </p>
+
+          <ul>
+
+            <li>
+              Share our initiatives
+            </li>
+
+            <li>
+              Promote awareness
+            </li>
+
+            <li>
+              Invite your community
+            </li>
+
+            <li>
+              Support social campaigns
+            </li>
+
+          </ul>
+
+          <a
+            href="contact.html"
+            class="card-button"
+          >
+            Contact Us
+          </a>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       VOLUNTEER SECTION
+  ========================== -->
+
+  <section
+    class="volunteer-section"
+    id="volunteer-form"
+  >
+
+    <div class="container">
+
+      <div class="volunteer-grid">
+
+
+        <!-- TEXT -->
+
+        <div class="volunteer-text">
+
+          <h2>
+            Become a Volunteer
+          </h2>
+
+          <p>
+            Your time and skills can make a real difference.
+            Join us in supporting communities and creating
+            meaningful social impact.
+          </p>
+
+          <ul class="benefits">
+
+            <li>
+              Contribute to meaningful initiatives
+            </li>
+
+            <li>
+              Develop teamwork and leadership skills
+            </li>
+
+            <li>
+              Connect with your local community
+            </li>
+
+            <li>
+              Make a positive social impact
+            </li>
+
+            <li>
+              Gain valuable volunteering experience
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <!-- FORM -->
+
+        <div class="volunteer-form">
+
+          <h3>
+            Volunteer Registration
+          </h3>
+
+          <form id="volunteerForm">
+
+
+            <!-- NAME -->
+
+            <div class="form-group">
+
+              <label for="name">
+                Full Name
+              </label>
+
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                autocomplete="name"
+                required
+              >
+
+            </div>
+
+
+            <!-- EMAIL -->
+
+            <div class="form-group">
+
+              <label for="email">
+                Email Address
+              </label>
+
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                autocomplete="email"
+                required
+              >
+
+            </div>
+
+
+            <!-- INTEREST -->
+
+            <div class="form-group">
+
+              <label for="interest">
+                Area of Interest
+              </label>
+
+              <select
+                id="interest"
+                name="interest"
+                required
+              >
+
+                <option value="">
+                  Select an area
+                </option>
+
+                <option value="education">
+                  Education
+                </option>
+
+                <option value="women-empowerment">
+                  Women Empowerment
+                </option>
+
+                <option value="food-support">
+                  Food Support
+                </option>
+
+                <option value="animal-welfare">
+                  Animal Welfare
+                </option>
+
+                <option value="environment">
+                  Environment
+                </option>
+
+                <option value="community-development">
+                  Community Development
+                </option>
+
+              </select>
+
+            </div>
+
+
+            <!-- MESSAGE -->
+
+            <div class="form-group">
+
+              <label for="message">
+                Why would you like to volunteer?
+              </label>
+
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Tell us a little about yourself..."
+                required
+              ></textarea>
+
+            </div>
+
+
+            <!-- SUBMIT -->
+
+            <button
+              type="submit"
+              class="submit-button"
+            >
+              Submit Application
+            </button>
+
+
+            <!-- SUCCESS MESSAGE -->
+
+            <div
+              class="form-message"
+              id="formMessage"
+              role="status"
+              aria-live="polite"
+            >
+              Thank you! Your volunteer application has been
+              submitted successfully.
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       SUPPORT CTA
+  ========================== -->
+
+  <section
+    class="cta"
+    id="support"
+  >
+
+    <div class="container">
+
+      <h2>
+        Every Contribution Matters
+      </h2>
+
+      <p>
+        Together, we can support communities, empower individuals,
+        and build a more inclusive and sustainable future.
+      </p>
+
+      <a
+        href="contact.html"
+        class="cta-button"
+      >
+        Contact Us to Support
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+
+        <!-- BRAND -->
+
+        <div class="footer-brand">
+
+          <h3>
+            InAmigos<span> Foundation</span>
+          </h3>
+
+          <p>
+            Working together to empower communities and create
+            a better, more inclusive future.
+          </p>
+
+        </div>
+
+
+        <!-- QUICK LINKS -->
+
+        <div class="footer-column">
+
+          <h4>
+            Quick Links
+          </h4>
+
+          <a href="index.html">
+            Home
+          </a>
+
+          <a href="about.html">
+            About
+          </a>
+
+          <a href="projects.html">
+            Projects
+          </a>
+
+          <a href="get-involved.html">
+            Get Involved
+          </a>
+
+          <a href="contact.html">
+            Contact
+          </a>
+
+        </div>
+
+
+        <!-- GET INVOLVED -->
+
+        <div class="footer-column">
+
+          <h4>
+            Get Involved
+          </h4>
+
+          <a href="#volunteer-form">
+            Volunteer
+          </a>
+
+          <a href="#support">
+            Donate
+          </a>
+
+          <a href="contact.html">
+            Partner With Us
+          </a>
+
+          <a href="contact.html">
+            Contact
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- COPYRIGHT -->
+
+      <div class="copyright">
+        © 2026 InAmigos Foundation.
+        All rights reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
+
+  <script>
+
+    /* MOBILE NAVIGATION */
+
+    const menuToggle =
+      document.getElementById("menuToggle");
+
+    const mainNav =
+      document.getElementById("mainNav");
+
+
+    menuToggle.addEventListener(
+      "click",
+      function () {
+
+        mainNav.classList.toggle("active");
+
+        const isOpen =
+          mainNav.classList.contains("active");
+
+        menuToggle.setAttribute(
+          "aria-expanded",
+          isOpen
+        );
+
+        menuToggle.setAttribute(
+          "aria-label",
+          isOpen
+            ? "Close navigation menu"
+            : "Open navigation menu"
+        );
+
+        menuToggle.textContent =
+          isOpen ? "✕" : "☰";
+
+      }
+    );
+
+
+    /* CLOSE MOBILE MENU AFTER CLICKING A LINK */
+
+    mainNav
+      .querySelectorAll("a")
+      .forEach(function (link) {
+
+        link.addEventListener(
+          "click",
+          function () {
+
+            mainNav.classList.remove("active");
+
+            menuToggle.setAttribute(
+              "aria-expanded",
+              "false"
+            );
+
+            menuToggle.setAttribute(
+              "aria-label",
+              "Open navigation menu"
+            );
+
+            menuToggle.textContent = "☰";
+
+          }
+        );
+
+      });
+
+
+    /* VOLUNTEER FORM */
+
+    const volunteerForm =
+      document.getElementById("volunteerForm");
+
+    const formMessage =
+      document.getElementById("formMessage");
+
+
+    volunteerForm.addEventListener(
+      "submit",
+      function (event) {
+
+        event.preventDefault();
+
+        formMessage.classList.add("show");
+
+        volunteerForm.reset();
+
+        setTimeout(function () {
+
+          formMessage.classList.remove("show");
+
+        }, 5000);
+
+      }
+    );
+
+  </script>
+
+</body>
+</html>
